@@ -1,0 +1,23 @@
+.footer {
+  background-color: #373737;
+  color: white;
+  padding: 20px 0;
+}
+.wrapper {
+  max-width: 1165px;
+  margin: 0 auto;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  @media screen and (max-width: 1160px) {
+    margin: 0 20px;
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .data {
+    max-width: 550px;
+  }
+}

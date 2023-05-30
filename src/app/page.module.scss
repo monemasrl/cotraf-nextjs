@@ -1,0 +1,41 @@
+.wrapperPages {
+  display: flex;
+  position: relative;
+  max-width: 1165px;
+  margin: 0 auto;
+  justify-content: space-between;
+  gap: 40px;
+  @media screen and (max-width: 1160px) {
+    margin: 0 20px;
+  }
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: 0px;
+  }
+  aside {
+    max-width: 340px;
+    @media screen and (max-width: 768px) {
+      max-width: 100%;
+    }
+  }
+  main {
+    max-width: 640px;
+  }
+  p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  h3 {
+    text-transform: uppercase;
+  }
+  h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin: 40px 0;
+  }
+}
+main.home {
+  position: relative;
+  max-width: 1165px;
+  margin: 0 auto;
+}

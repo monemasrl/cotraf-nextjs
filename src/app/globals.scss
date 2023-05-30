@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+header {
+  position: relative;
+}
+
+.button {
+  border-radius: 5px;
+  width: auto;
+  background-color: #cca817;
+  padding: 2px 18px;
+  color: #fff;
+  display: block;
+  line-height: 24px;
+}
