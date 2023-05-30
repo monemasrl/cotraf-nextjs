@@ -1,10 +1,21 @@
+"use client";
 import React from "react";
 import style from "./footer.module.scss";
+import { usePathname } from "next/navigation";
 type Props = {};
 
 function Footer({}: Props) {
+  const pathname = usePathname();
+
+  function footerheight() {
+    if (pathname === "/") {
+      return "home";
+    } else {
+      return "page";
+    }
+  }
   return (
-    <footer className={style.footer}>
+    <footer className={`${style.footer} ${style[footerheight()]}`}>
       <div className={style.wrapper}>
         <div className={style.data}>
           <p>
