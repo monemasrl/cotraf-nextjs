@@ -1,5 +1,5 @@
 "use client";
-import React, { use, useEffect } from "react";
+import React, { useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import style from "./header.module.scss";
@@ -14,7 +14,7 @@ function Header({}: Props) {
   const mobile = useMediaQuery(860);
   const pathname = usePathname();
   const [mobileMenu, setMobileMenu] = React.useState(false);
-
+  console.log(pathname, "pathname");
   function headerheight() {
     if (pathname === "/") {
       return "home";
@@ -25,6 +25,7 @@ function Header({}: Props) {
   useEffect(() => {
     setMobileMenu(false);
   }, [pathname]);
+
   const data = {
     nav1: [
       { name: "HOME", link: "/" },
@@ -96,20 +97,22 @@ function Header({}: Props) {
                 <TfiClose />
               </li>
             )}
-            {data.nav1.map((item) => (
-              <li key={item.name}>
-                {" "}
-                <Link href={item.link}>
-                  {pathname === item.link && (
-                    <motion.span
-                      layoutId={animationLineInMenuMobile()}
-                      className={style.navUnderline}
-                    ></motion.span>
-                  )}
-                  {item.name}
-                </Link>
-              </li>
-            ))}
+            {data.nav1.map((item) => {
+              return (
+                <li key={item.name}>
+                  {" "}
+                  <Link href={item.link}>
+                    {pathname.includes(item.link) && item.link.length > 1 && (
+                      <motion.span
+                        layoutId={animationLineInMenuMobile()}
+                        className={style.navUnderline}
+                      ></motion.span>
+                    )}
+                    {item.name}
+                  </Link>
+                </li>
+              );
+            })}
             <li className={style.info}>
               <a href={`tel:${data.nav2[0].link}`}>
                 <span> {data.nav2[0].name}</span> {data.nav2[0].link}

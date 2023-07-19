@@ -1,3 +1,12 @@
 .testoPagine {
   max-width: 751px;
+  ul {
+    padding-left: 1rem;
+  }
+  li {
+    list-style: disc;
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 24px;
+  }
 }
