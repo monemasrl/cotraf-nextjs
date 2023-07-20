@@ -39,7 +39,7 @@ function Header({}: Props) {
     nav2: [
       { name: "Telefono:", link: "055/0202253" },
       { name: "Mail:", link: "info@consorzio-cotraf.it" },
-      { name: "contattaci", link: "/" },
+      { name: "contattaci", link: "/informazioni" },
     ],
   };
 
@@ -136,6 +136,8 @@ function Header({}: Props) {
           alt="cotraf logo"
           fill={true}
           priority={true}
+          placeholder="blur"
+          blurDataURL="/img/immagine_home_blur.jpg"
         />
         {headerheight() === "home" ? (
           <div className={style.testoJumboHome}>

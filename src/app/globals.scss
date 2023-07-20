@@ -38,3 +38,14 @@ main {
     margin-right: 5px;
   }
 }
+.backbtn {
+  border: none;
+  border-radius: 0;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  margin-top: 2rem;
+  svg {
+    top: 2px;
+    position: relative;
+  }
+}

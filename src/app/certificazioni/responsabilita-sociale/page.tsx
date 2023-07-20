@@ -3,6 +3,7 @@ import LayoutPages from "../../layoutPages";
 import style from "./page.module.scss";
 import { Raleway } from "next/font/google";
 import Image from "next/image";
+import BackButton from "../../../../components/backButton";
 const text = Raleway({ subsets: ["latin"] });
 type Props = {};
 export const metadata = {
@@ -12,6 +13,8 @@ export const metadata = {
 function Sociale({}: Props) {
   return (
     <LayoutPages>
+      {" "}
+      <BackButton />
       <h1>Responsabilità sociale</h1>
       <div className={`${style.testoPagine} ${text.className}`}>
         <h3>Politica per la Responsabilità Sociale </h3>

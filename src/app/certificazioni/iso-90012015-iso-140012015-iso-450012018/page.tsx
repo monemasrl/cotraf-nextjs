@@ -1,8 +1,8 @@
-import React from "react";
 import LayoutPages from "../../layoutPages";
 import style from "./page.module.scss";
 import { Raleway } from "next/font/google";
 import Image from "next/image";
+import BackButton from "../../../../components/backButton";
 const text = Raleway({ subsets: ["latin"] });
 type Props = {};
 export const metadata = {
@@ -13,10 +13,12 @@ export const metadata = {
 function Iso({}: Props) {
   return (
     <LayoutPages>
+      <BackButton />
       <h1>
         ISO 9001:2015, ISO 14001:2015, <br />
         ISO 45001:2018
       </h1>
+
       <div className={`${style.testoPagine} ${text.className}`}>
         <p>
           Il Consorzio Stabile COTRAF ha implementato un Sistema di Gestione

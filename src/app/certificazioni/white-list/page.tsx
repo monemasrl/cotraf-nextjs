@@ -3,6 +3,7 @@ import LayoutPages from "../../layoutPages";
 import style from "./page.module.scss";
 import { Raleway } from "next/font/google";
 import Image from "next/image";
+import BackButton from "../../../../components/backButton";
 const text = Raleway({ subsets: ["latin"] });
 type Props = {};
 export const metadata = {
@@ -12,7 +13,9 @@ export const metadata = {
 function Whitelist({}: Props) {
   return (
     <LayoutPages>
+      <BackButton />
       <h1>Whitelist</h1>
+
       <div className={`${style.testoPagine} ${text.className}`}>
         <ul>
           <li>
