@@ -8,7 +8,7 @@ function Form({}: Props) {
       name="contact"
       method="POST"
       data-netlify="true"
-      action="contact/?success=true"
+      action="informazioni/?success=true"
       data-netlify-honeypot="bot-field"
     >
       <input type="hidden" name="form-name" value="contact" />
