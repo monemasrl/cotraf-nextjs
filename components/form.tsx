@@ -9,6 +9,7 @@ function Form({}: Props) {
       method="POST"
       data-netlify="true"
       action="contact/?success=true"
+      data-netlify-honeypot="bot-field"
     >
       <input type="hidden" name="form-name" value="contact" />
       <p>
@@ -26,6 +27,11 @@ function Form({}: Props) {
       </p>
       <p>
         <button type="submit">Send</button>
+      </p>
+      <p hidden>
+        <label>
+          Don’t fill this out: <input name="bot-field" />
+        </label>
       </p>
     </form>
   );
