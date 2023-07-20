@@ -8,13 +8,15 @@ import { motion } from "framer-motion";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { TfiClose } from "react-icons/tfi";
+import heroImage from "/public/img/immagine_home.jpg";
+import { blurBaseHero } from "../src/app/utility";
 type Props = {};
 
 function Header({}: Props) {
   const mobile = useMediaQuery(860);
   const pathname = usePathname();
   const [mobileMenu, setMobileMenu] = React.useState(false);
-  console.log(pathname, "pathname");
+
   function headerheight() {
     if (pathname === "/") {
       return "home";
@@ -81,6 +83,7 @@ function Header({}: Props) {
               alt="cotraf logo"
               width={124}
               height={80}
+              priority={true}
             />
           </Link>
           {mobile && (
@@ -132,12 +135,12 @@ function Header({}: Props) {
       <div className={style.wrapperJumbo}>
         <Image
           className={style.headerImage}
-          src="/img/immagine_home.jpg"
-          alt="cotraf logo"
+          src={heroImage}
+          alt="cotraf hero image"
           fill={true}
           priority={true}
           placeholder="blur"
-          blurDataURL="/img/immagine_home_blur.jpg"
+          blurDataURL={blurBaseHero}
         />
         {headerheight() === "home" ? (
           <div className={style.testoJumboHome}>
