@@ -1,8 +1,20 @@
-import React from "react";
-
+"use client";
+import { useSearchParams } from "next/navigation";
+import style from "./form.module.scss";
 type Props = {};
 
+function SuccessMessage() {
+  return (
+    <div className={style.success}>
+      <h3>Messaggio inviato</h3>
+      <p>Risponderemo al messaggio nel più breve tempo possibile</p>
+    </div>
+  );
+}
+
 function Form({}: Props) {
+  const searchParams = useSearchParams();
+  const success = searchParams.get("success");
   return (
     <form
       name="contact"
@@ -11,6 +23,8 @@ function Form({}: Props) {
       action="informazioni/?success=true"
       data-netlify-honeypot="bot-field"
     >
+      {success && <SuccessMessage />}
+
       <input type="hidden" name="form-name" value="contact" />
       <p>
         <input type="text" name="firstname" id="firstname" />
