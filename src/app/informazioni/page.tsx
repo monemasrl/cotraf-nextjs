@@ -6,7 +6,10 @@ import Form from "../../../components/form";
 
 const text = Raleway({ subsets: ["latin"] });
 type Props = {};
-
+export const metadata = {
+  title: "Consorzio Cotraf - informazioni",
+  description: "Consorzio Cotraf - informazioni",
+};
 function Consorzio({}: Props) {
   return (
     <LayoutPages>

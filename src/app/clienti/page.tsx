@@ -4,6 +4,10 @@ import style from "./page.module.scss";
 import { Raleway } from "next/font/google";
 const text = Raleway({ subsets: ["latin"] });
 type Props = {};
+export const metadata = {
+  title: "Consorzio Cotraf - clienti",
+  description: "Consorzio Cotraf - clienti",
+};
 const data = [
   "Uniflotte gruppo HERA spa",
   "AgegasApsAmga gruppo",

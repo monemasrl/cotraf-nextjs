@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://consorzio-cotraf.it
+
+# Sitemaps
+Sitemap: https://consorzio-cotraf.it/sitemap.xml

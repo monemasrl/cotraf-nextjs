@@ -5,7 +5,10 @@ import { Raleway } from "next/font/google";
 import Image from "next/image";
 const text = Raleway({ subsets: ["latin"] });
 type Props = {};
-
+export const metadata = {
+  title: "Consorzio Cotraf - certificazioni - white list",
+  description: "Consorzio Cotraf - certificazioni",
+};
 function Whitelist({}: Props) {
   return (
     <LayoutPages>
@@ -16,6 +19,8 @@ function Whitelist({}: Props) {
             <a
               className="link-certificazioni"
               href={"/pdf/whitelist/white list.pdf"}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Image
                 src="/img/pdf-icon.png"

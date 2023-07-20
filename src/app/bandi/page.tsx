@@ -4,7 +4,10 @@ import style from "./page.module.scss";
 import { Raleway } from "next/font/google";
 const text = Raleway({ subsets: ["latin"] });
 type Props = {};
-
+export const metadata = {
+  title: "Consorzio Cotraf - bandi",
+  description: "Consorzio Cotraf - bandi",
+};
 function Bandi({}: Props) {
   return (
     <LayoutPages>

@@ -5,7 +5,10 @@ import { Raleway } from "next/font/google";
 import Link from "next/link";
 const text = Raleway({ subsets: ["latin"] });
 type Props = {};
-
+export const metadata = {
+  title: "Consorzio Cotraf - certificazioni",
+  description: "Consorzio Cotraf - certificazioni",
+};
 function Certificazioni({}: Props) {
   return (
     <LayoutPages>

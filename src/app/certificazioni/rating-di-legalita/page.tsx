@@ -5,7 +5,10 @@ import { Raleway } from "next/font/google";
 
 const text = Raleway({ subsets: ["latin"] });
 type Props = {};
-
+export const metadata = {
+  title: "Consorzio Cotraf - certificazioni - rating di legalità",
+  description: "Consorzio Cotraf - certificazioni",
+};
 function Legalita({}: Props) {
   return (
     <LayoutPages>
@@ -16,6 +19,8 @@ function Legalita({}: Props) {
             <a
               href={"/pdf/rating-legalita/Segnatura.pdf"}
               className="link-certificazioni"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Rating di legalità
             </a>

@@ -5,6 +5,11 @@ import { Raleway } from "next/font/google";
 const text = Raleway({ subsets: ["latin"] });
 type Props = {};
 
+export const metadata = {
+  title: "Consorzio Cotraf - sanificazione",
+  description: "Consorzio Cotraf - sanificazione",
+};
+
 function Consorzio({}: Props) {
   return (
     <LayoutPages>

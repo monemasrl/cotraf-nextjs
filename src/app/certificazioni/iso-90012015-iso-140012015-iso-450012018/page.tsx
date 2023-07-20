@@ -5,7 +5,11 @@ import { Raleway } from "next/font/google";
 import Image from "next/image";
 const text = Raleway({ subsets: ["latin"] });
 type Props = {};
-
+export const metadata = {
+  title:
+    "Consorzio Cotraf - certificazioni - iso 9001:2015, iso 14001:2015, iso 45001:2018",
+  description: "Consorzio Cotraf - certificazioni",
+};
 function Iso({}: Props) {
   return (
     <LayoutPages>
@@ -25,6 +29,8 @@ function Iso({}: Props) {
             <a
               href="/pdf/iso/(Posizione 1) ISO9001.2015,ISO14001.2015,ISO45001.2018 (2).pdf"
               className="link-certificazioni"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Image
                 src="/img/pdf-icon.png"

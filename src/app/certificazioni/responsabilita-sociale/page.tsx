@@ -5,7 +5,10 @@ import { Raleway } from "next/font/google";
 import Image from "next/image";
 const text = Raleway({ subsets: ["latin"] });
 type Props = {};
-
+export const metadata = {
+  title: "Consorzio Cotraf - certificazioni - responsabilità sociale",
+  description: "Consorzio Cotraf - certificazioni",
+};
 function Sociale({}: Props) {
   return (
     <LayoutPages>
@@ -15,7 +18,11 @@ function Sociale({}: Props) {
         <p>
           L&rsquo;Azienda ha definito una politica per la qualità,
           l&rsquo;ambiente e la sicurezza contenuta nel documento{" "}
-          <a href={"/pdf/responsabilita-sociale/Politica SA8000 (1) (1).pdf"}>
+          <a
+            href={"/pdf/responsabilita-sociale/Politica SA8000 (1) (1).pdf"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             POLITICA SA 8000
           </a>
         </p>
@@ -27,6 +34,8 @@ function Sociale({}: Props) {
             href={
               "/pdf/responsabilita-sociale/Politica integrata qualita, ambiente e sicurezza (1).pdf"
             }
+            target="_blank"
+            rel="noopener noreferrer"
           >
             POLITICA INTEGRATA QUALITA’ AMBIENTE E SICUREZZA
           </a>
@@ -46,7 +55,11 @@ function Sociale({}: Props) {
           Nel 2014 la Norma ha preso in considerazione altre tematiche sempre
           più inclusive e attente alle necessità dell’epoca in cui viviamo.
           Alleghiamo qui di seguito la norma SA 8000 <br />{" "}
-          <a href={"/pdf/responsabilita-sociale/norma SA8000 (1).pdf"}>
+          <a
+            href={"/pdf/responsabilita-sociale/norma SA8000 (1).pdf"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             NORMA SA 8000
           </a>
         </p>{" "}
@@ -135,6 +148,8 @@ function Sociale({}: Props) {
             href={
               "/pdf/responsabilita-sociale/PRS 01 - Procedura  lavoro infantile (1) (1).pdf"
             }
+            target="_blank"
+            rel="noopener noreferrer"
           >
             PRS.01 (lavoro infantile)
           </a>
@@ -149,6 +164,8 @@ function Sociale({}: Props) {
             href={
               "/pdf/responsabilita-sociale/PRS 02 - Procedura  Reclami e segnalazioni (1).pdf"
             }
+            target="_blank"
+            rel="noopener noreferrer"
           >
             PRS.2 (Reclami e Segnalazioni SA8000)
           </a>
@@ -158,6 +175,8 @@ function Sociale({}: Props) {
             <a
               href={"/pdf/responsabilita-sociale/Politica SA8000 (1) (1).pdf"}
               className="link-certificazioni"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Image
                 src="/img/pdf-icon.png"
@@ -174,6 +193,8 @@ function Sociale({}: Props) {
                 "/pdf/responsabilita-sociale/Politica integrata qualita, ambiente e sicurezza (1).pdf"
               }
               className="link-certificazioni"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Image
                 src="/img/pdf-icon.png"
@@ -188,6 +209,8 @@ function Sociale({}: Props) {
             <a
               href={"/pdf/responsabilita-sociale/norma SA8000 (1).pdf"}
               className="link-certificazioni"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Image
                 src="/img/pdf-icon.png"
@@ -204,6 +227,8 @@ function Sociale({}: Props) {
                 "/pdf/responsabilita-sociale/PRS 01 - Procedura  lavoro infantile (1) (1).pdf"
               }
               className="link-certificazioni"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Image
                 src="/img/pdf-icon.png"
@@ -220,6 +245,8 @@ function Sociale({}: Props) {
                 "/pdf/responsabilita-sociale/PRS 02 - Procedura  Reclami e segnalazioni (1).pdf"
               }
               className="link-certificazioni"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Image
                 src="/img/pdf-icon.png"
