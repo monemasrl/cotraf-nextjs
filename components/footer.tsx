@@ -24,7 +24,12 @@ function Footer({}: Props) {
           </p>
           <p>p.iva 05070980486</p>
         </div>
-        <div className={style.credit}>Realizzato da Monema srl</div>
+        <div className={style.credit}>
+          Realizzato da{" "}
+          <a rel="noopener noreferrer" target="_blank" href="https://monema.it">
+            Monema srl
+          </a>
+        </div>
       </div>
     </footer>
   );
