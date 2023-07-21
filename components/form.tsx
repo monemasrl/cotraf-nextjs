@@ -1,4 +1,5 @@
 "use client";
+import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import style from "./form.module.scss";
 type Props = {};
@@ -15,6 +16,14 @@ function SuccessMessage() {
 function Form({}: Props) {
   const searchParams = useSearchParams();
   const success = searchParams.get("success");
+
+  const [ragionesociale, setRagionesociale] = useState<string>("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
+
+  useEffect(() => {}, []);
+
   return (
     <form
       className={style.form}
@@ -23,6 +32,7 @@ function Form({}: Props) {
       data-netlify="true"
       action="informazioni/?success=true"
       data-netlify-honeypot="bot-field"
+      data-netlify-recaptcha="true"
     >
       {success && <SuccessMessage />}
 
@@ -30,19 +40,27 @@ function Form({}: Props) {
       <p>
         {" "}
         <label htmlFor="ragionesociale">Ragione Sociale:</label> <br />
-        <input type="text" name="ragionesociale" id="ragionesociale" />
+        <input
+          onChange={(e) => {
+            setRagionesociale(e.target.value);
+          }}
+          type="text"
+          name="ragionesociale"
+          id="ragionesociale"
+          required
+        />
       </p>
       <p>
         <label htmlFor="youremail">Indirizzo mail:</label> <br />
-        <input type="email" name="email" id="youremail" />
+        <input type="email" name="email" id="youremail" required />
       </p>
       <p>
         <label htmlFor="phone">Telefono</label> <br />
-        <input type="email" name="phone" id="phone" />
+        <input type="phone" name="phone" id="phone" required />
       </p>
       <p>
         <label htmlFor="yourmessage">Messaggio:</label> <br />
-        <textarea name="message" id="yourmessage"></textarea>
+        <textarea name="message" id="yourmessage" required></textarea>
       </p>
       <p>
         <button type="submit">Invia</button>
