@@ -14,8 +14,7 @@ function HomeLavora({}: Props) {
         se sei interessato ai nostri servizi oppure ad una possibilità
         lavorativa, contattaci
       </p>
-      <Link className={`${style.btn} ${text.className}`} href="#">
-        {" "}
+      <Link className={`${style.btn} ${text.className}`} href="/informazioni">
         contattaci
       </Link>
 

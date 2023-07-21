@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import style from "./header.module.scss";
@@ -15,7 +15,7 @@ type Props = {};
 function Header({}: Props) {
   const mobile = useMediaQuery(860);
   const pathname = usePathname();
-  const [mobileMenu, setMobileMenu] = React.useState(false);
+  const [mobileMenu, setMobileMenu] = useState(false);
 
   function headerheight() {
     if (pathname === "/") {

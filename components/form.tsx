@@ -33,7 +33,7 @@ function Form({}: Props) {
         <input type="text" name="ragionesociale" id="ragionesociale" />
       </p>
       <p>
-        <label htmlFor="youremail">mail:</label> <br />
+        <label htmlFor="youremail">Indirizzo mail:</label> <br />
         <input type="email" name="email" id="youremail" />
       </p>
       <p>

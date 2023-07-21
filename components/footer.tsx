@@ -19,7 +19,7 @@ function Footer({}: Props) {
       <div className={style.wrapper}>
         <div className={style.data}>
           <p>
-            © 2016 Consorzio stabile Co.tra.f. viale Montegrappa 13, Prato (PO)
+            © 2023 Consorzio stabile Co.tra.f. viale Montegrappa 13, Prato (PO)
             - tutti i diritti riservati
           </p>
           <p>p.iva 05070980486</p>
