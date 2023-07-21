@@ -21,7 +21,11 @@ function Form({}: Props) {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
-
+  function handleSubmit(e: any) {
+    console.log(e);
+    e.preventDefault();
+    e.target.submit();
+  }
   useEffect(() => {}, []);
 
   return (
