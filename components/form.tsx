@@ -56,7 +56,7 @@ function Form({}: Props) {
       </p>
       <p>
         <label htmlFor="phone">Telefono</label> <br />
-        <input type="phone" name="phone" id="phone" required />
+        <input type="tel" name="phone" id="phone" required />
       </p>
       <p>
         <label htmlFor="yourmessage">Messaggio:</label> <br />
