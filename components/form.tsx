@@ -16,17 +16,39 @@ function SuccessMessage() {
 function Form({}: Props) {
   const searchParams = useSearchParams();
   const success = searchParams.get("success");
+  const [ragioneSociale, setRagioneSociale] = useState<string>("");
+  const [mail, setMail] = useState<string>("");
+  const [phone, setPhone] = useState<string>("");
+  const [messaggio, setMessaggio] = useState<string>("");
 
-  const [ragionesociale, setRagionesociale] = useState<string>("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [message, setMessage] = useState("");
-  function handleSubmit(e: any) {
-    console.log(e);
-    e.preventDefault();
-    e.target.submit();
-  }
-  useEffect(() => {}, []);
+  const [error, setError] = useState<string>("");
+  const [submit, setSubmit] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (ragioneSociale.length < 3) {
+      setError("Nome troppo corto");
+    } else if (mail.length < 3 && !mail.includes("@")) {
+      setError("Mail troppo corta");
+    } else if (phone.length < 3) {
+      setError("Telefono troppo corto");
+    } else if (messaggio.length < 10) {
+      setError("Messaggio troppo corto");
+    } else {
+      setError("");
+    }
+    //controllo sul submit del form netlify
+    if (
+      ragioneSociale.length < 3 &&
+      mail.length < 3 &&
+      !mail.includes("@") &&
+      phone.length < 3 &&
+      messaggio.length < 10
+    ) {
+      setSubmit(false);
+    } else {
+      setSubmit(true);
+    }
+  }, [ragioneSociale, mail, phone, messaggio]);
 
   return (
     <form
@@ -39,14 +61,14 @@ function Form({}: Props) {
       data-netlify-recaptcha="true"
     >
       {success && <SuccessMessage />}
-
+      {error && <p className={style.error}>{error}</p>}
       <input type="hidden" name="form-name" value="contact" />
       <p>
         {" "}
         <label htmlFor="ragionesociale">Ragione Sociale:</label> <br />
         <input
           onChange={(e) => {
-            setRagionesociale(e.target.value);
+            setRagioneSociale(e.target.value);
           }}
           type="text"
           name="ragionesociale"
@@ -56,18 +78,39 @@ function Form({}: Props) {
       </p>
       <p>
         <label htmlFor="youremail">Indirizzo mail:</label> <br />
-        <input type="email" name="email" id="youremail" required />
+        <input
+          onChange={(e) => setMail(e.target.value)}
+          type="email"
+          name="email"
+          id="youremail"
+          required
+        />
       </p>
       <p>
         <label htmlFor="phone">Telefono</label> <br />
-        <input type="tel" name="phone" id="phone" required />
+        <input
+          onChange={(e) => setPhone(e.target.value)}
+          type="tel"
+          name="phone"
+          id="phone"
+          required
+        />
       </p>
       <p>
         <label htmlFor="yourmessage">Messaggio:</label> <br />
-        <textarea name="message" id="yourmessage" required></textarea>
+        <textarea
+          onChange={(e) => {
+            setMessaggio(e.target.value);
+          }}
+          name="message"
+          id="yourmessage"
+          required
+        ></textarea>
       </p>
       <p>
-        <button type="submit">Invia</button>
+        <button disabled={error ? true : false} type="submit">
+          Invia
+        </button>
       </p>
       <p hidden>
         <label>
