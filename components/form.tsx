@@ -17,31 +17,50 @@ function Form({}: Props) {
   const searchParams = useSearchParams();
   const success = searchParams.get("success");
   const [ragioneSociale, setRagioneSociale] = useState<string>("");
+  const [errorRagioneSociale, setErrorRagioneSociale] = useState<string>("");
   const [mail, setMail] = useState<string>("");
+  const [errorMail, setErrorMail] = useState<string>("");
   const [phone, setPhone] = useState<string>("");
+  const [errorPhone, setErrorPhone] = useState<string>("");
   const [messaggio, setMessaggio] = useState<string>("");
+  const [errorMessaggio, setErrorMessaggio] = useState<string>("");
 
-  const [error, setError] = useState<string>("");
   const [submit, setSubmit] = useState<boolean>(false);
 
   useEffect(() => {
-    if (ragioneSociale.length < 3) {
-      setError("Nome troppo corto");
-    } else if (mail.length < 3 && !mail.includes("@")) {
-      setError("Mail troppo corta");
-    } else if (phone.length < 3) {
-      setError("Telefono troppo corto");
-    } else if (messaggio.length < 10) {
-      setError("Messaggio troppo corto");
+    if (ragioneSociale.length < 6 && ragioneSociale.length > 0) {
+      setErrorRagioneSociale("Inserire un nome di almeno 6 caratteri");
     } else {
-      setError("");
+      setErrorRagioneSociale("");
     }
+
+    if (mail.length < 6 && mail.length > 0) {
+      setErrorMail("Inserire un indirizzo mail valido");
+    } else if (mail.length > 0 && !mail.includes("@")) {
+      setErrorMail("Inserire un indirizzo mail valido");
+    } else {
+      setErrorMail("");
+    }
+    console.log(phone.length < 3 && phone.length > 0);
+    if (phone.length < 3 && phone.length > 0) {
+      setErrorPhone("Inserire un numero di telefono valido");
+    } else if (phone.length > 0 && isNaN(phone as any)) {
+      setErrorPhone("Inserire un numero di telefono valido");
+    } else {
+      setErrorPhone("");
+    }
+    if (messaggio.length < 10 && messaggio.length > 0) {
+      setErrorMessaggio("Inserire almeno 10 caratteri");
+    } else {
+      setErrorMessaggio("");
+    }
+    console.log(errorPhone);
     //controllo sul submit del form netlify
     if (
-      ragioneSociale.length < 3 &&
-      mail.length < 3 &&
-      !mail.includes("@") &&
-      phone.length < 3 &&
+      ragioneSociale.length < 3 ||
+      mail.length < 3 ||
+      !mail.includes("@") ||
+      phone.length < 3 ||
       messaggio.length < 10
     ) {
       setSubmit(false);
@@ -50,6 +69,7 @@ function Form({}: Props) {
     }
   }, [ragioneSociale, mail, phone, messaggio]);
 
+  function handlesubmit(e: React.FormEvent<HTMLFormElement>) {}
   return (
     <form
       className={style.form}
@@ -61,7 +81,12 @@ function Form({}: Props) {
       data-netlify-recaptcha="true"
     >
       {success && <SuccessMessage />}
-      {error && <p className={style.error}>{error}</p>}
+      {errorRagioneSociale && (
+        <p className={style.error}>{errorRagioneSociale}</p>
+      )}
+      {errorMail && <p className={style.error}>{errorMail}</p>}
+      {errorPhone && <p className={style.error}>{errorPhone}</p>}
+      {errorMessaggio && <p className={style.error}>{errorMessaggio}</p>}
       <input type="hidden" name="form-name" value="contact" />
       <p>
         {" "}
@@ -108,7 +133,7 @@ function Form({}: Props) {
         ></textarea>
       </p>
       <p>
-        <button disabled={error ? true : false} type="submit">
+        <button disabled={submit ? false : true} type="submit">
           Invia
         </button>
       </p>
