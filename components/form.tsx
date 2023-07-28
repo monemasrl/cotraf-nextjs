@@ -142,6 +142,7 @@ function Form({}: Props) {
           Don’t fill this out: <input name="bot-field" />
         </label>
       </p>
+      <div data-netlify-recaptcha="true"></div>
     </form>
   );
 }
