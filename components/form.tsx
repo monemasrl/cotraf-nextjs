@@ -77,7 +77,7 @@ function Form({}: Props) {
       method="POST"
       data-netlify="true"
       action="informazioni/?success=true"
-      data-netlify-honeypot="bot-field"
+      data-netlify-honeypot="first-name"
       data-netlify-recaptcha="true"
     >
       {success && <SuccessMessage />}
@@ -139,10 +139,9 @@ function Form({}: Props) {
       </p>
       <p hidden>
         <label>
-          Don’t fill this out: <input name="bot-field" />
+          <input name="first-name" />
         </label>
       </p>
-      <div data-netlify-recaptcha="true"></div>
     </form>
   );
 }
