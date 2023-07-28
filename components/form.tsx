@@ -77,7 +77,7 @@ function Form({}: Props) {
       method="POST"
       data-netlify="true"
       action="informazioni/?success=true"
-      data-netlify-honeypot="first-name"
+      data-netlify-honeypot="mail-confirm"
       data-netlify-recaptcha="true"
     >
       {success && <SuccessMessage />}
@@ -139,7 +139,7 @@ function Form({}: Props) {
       </p>
       <p hidden>
         <label>
-          <input name="first-name" />
+          <input name="mail-confirm" />
         </label>
       </p>
     </form>
