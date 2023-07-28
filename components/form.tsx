@@ -78,7 +78,6 @@ function Form({}: Props) {
       data-netlify="true"
       action="informazioni/?success=true"
       data-netlify-honeypot="bot-field"
-      data-netlify-recaptcha="true"
     >
       {success && <SuccessMessage />}
       {errorRagioneSociale && (
