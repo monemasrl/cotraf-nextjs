@@ -58,7 +58,7 @@ function Header({}: Props) {
         <nav className={style.secondaryNav}>
           <ul>
             <li>
-              <a href={`tel:${data.nav2[0].link}`}>
+              <a href={`tel:${data.nav2[0].link}}>
                 <span> {data.nav2[0].name}</span> {data.nav2[0].link}
               </a>
             </li>
