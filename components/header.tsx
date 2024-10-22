@@ -39,7 +39,7 @@ function Header({}: Props) {
       { name: "INFORMAZIONI", link: "/informazioni" },
     ],
     nav2: [
-      { name: "Telefono:", link: "055/0202253" },
+      { name: "Telefono:", link: "055/3987323", url: "+390553987323" },
       { name: "Mail:", link: "info@consorzio-cotraf.it" },
       { name: "contattaci", link: "/informazioni" },
     ],
@@ -58,11 +58,10 @@ function Header({}: Props) {
         <nav className={style.secondaryNav}>
           <ul>
             <li>
-              <a href={`tel:${data.nav2[0].link}}>
+              <a href={`tel:${data.nav2[0].url}`}>
                 <span> {data.nav2[0].name}</span> {data.nav2[0].link}
               </a>
             </li>
-
             <li>
               <a href={`mailto:${data.nav2[1].link}`}>
                 <span> {data.nav2[1].name}</span> {data.nav2[1].link}
@@ -117,7 +116,7 @@ function Header({}: Props) {
               );
             })}
             <li className={style.info}>
-              <a href={`tel:${data.nav2[0].link}`}>
+              <a href={`tel:${data.nav2[0].url}`}>
                 <span> {data.nav2[0].name}</span> {data.nav2[0].link}
               </a>
 
