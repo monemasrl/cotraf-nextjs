@@ -1,0 +1,142 @@
+[
+    {
+        "nome": "SETTORE AMBIENTE",
+        "lista": [
+            {
+                "nome": "UNIFLOTTE S.R.L.",
+                "descrizione": "Attività di manutenzione e movimentazione contenitori stradali per rifiuto. Servizio di lavaggio automezzi per la raccolta e lo spazzamento e contenitori per rifiuto. Servizio di manutenzione, verniciatura e attività correlate di cassoni e elettro compattatori. Servizio di riparazione e rigenerazione contenitori stradali per rifiuti. Fornitura di contenitori per rifiuti speciali e ricambistica per contenitori stradali per rifiuto.",
+                "immagine": "/img/clienti/hera-flotte.jpg"
+            },
+            {
+                "nome": "ACEGAS APS AMGA S.P.A.",
+                "descrizione": "Attività di manutenzione e movimentazione contenitori stradali per rifiuto.",
+                "immagine": "/img/clienti/acegas.jpg"
+            },
+            {
+                "nome": "HERA AMBIENTE S.P.A.",
+                "descrizione": "Valorizzazione dei rifiuti mediante processi di selezione meccanica e manuale, integrati con sistemi di movimentazione meccanizzata. Servizio di pulizie civili e industriali eseguite presso impianti di trattamento e stoccaggio rifiuti.",
+                "immagine": "/img/clienti/hera-ambiente.jpg"
+            },
+            {
+                "nome": "HERA S.P.A.",
+                "descrizione": "Attività di facchinaggio e gestione magazzino presso le unità produttive del gruppo Hera. Manutenzione del verde e rimozione neve presso le sedi tecniche di Acegaaps e hestambiente.",
+                "immagine": "/img/clienti/hera.jpg"
+            },
+            {
+                "nome": "ALIA SERVIZI AMBIENTALI S.P.A.",
+                "descrizione": "Servizio di movimentazione di cassonetti stradali per la raccolta rifiuti.",
+                "immagine": "/img/clienti/alia.jpg"
+            },
+            {
+                "nome": "IREN S.P.A.",
+                "descrizione": "Servizio di lavaggio automezzi per la raccolta e lo spazzamento e contenitori per rifiuto. Servizio sgombero neve e salatura antighiaccio.",
+                "immagine": "/img/clienti/iren.jpg"
+            },
+            {
+                "nome": "SEI TOSCANA SRL",
+                "descrizione": "Fornitura contenitori stradali per rifiuto rigenerati e contenitori per rifiuti speciali.",
+                "immagine": "/img/clienti/sei.jpg"
+            },
+            {
+                "nome": "AMA S.P.A.",
+                "descrizione": "Servizio di manutenzione e movimentazione contenitori stradali per rifiuto. Fornitura contenitori stradali per rifiuto rigenerati.",
+                "immagine": "/img/clienti/ama.jpg"
+            },
+            {
+                "nome": "REAL S.R.L.",
+                "descrizione": "Valorizzazione dei rifiuti mediante processi di selezione meccanica e manuale, integrati con sistemi di movimentazione meccanizzata.",
+                "immagine": "/img/clienti/real.jpg"
+            },
+            {
+                "nome": "A2A S.P.A.",
+                "descrizione": "Valorizzazione dei rifiuti mediante processi di selezione meccanica e manuale, integrati con sistemi di movimentazione meccanizzata. Servizio di guardiania notturna e festiva.",
+                "immagine": "/img/clienti/a2a.jpg"
+            },
+            {
+                "nome": "GARC S.P.A.",
+                "descrizione": "Facchinaggio e assistenza allo smaltimento rifiuti speciali industriali.",
+                "immagine": "/img/clienti/garc.jpg"
+            },
+            {
+                "nome": "CASA GUGLIELMI O.N.L.U.S.",
+                "descrizione": "Servizio di pulizie e vigilanza notturna presso la casa di accoglienza.",
+                "immagine": "/img/clienti/guglielmi.jpg"
+            },
+            {
+                "nome": "CITTÀ METROPOLITANA DI FIRENZE",
+                "descrizione": "Facchinaggio e pulizie presso le sedi territoriali.",
+                "immagine": "/img/clienti/firenze.jpg"
+            }
+        ]
+    },
+    {
+        "nome": "LOGISTICA IN AMBITO FARMACEUTICO SANITARIO E SOCIO ASSISTENZIALE",
+        "lista": [
+            {
+                "nome": "ESTAR",
+                "descrizione": "Logistica e distribuzione farmaci, dispositivi medici e altro materiale sanitario presso i presidi territoriali.",
+                "immagine": "/img/clienti/estar.jpg"
+            },
+            {
+                "nome": "RAVENNA FARMACIE S.R.L",
+                "descrizione": "Logistica e distribuzione farmaci.",
+                "immagine": "/img/clienti/ravenna.jpg"
+            },
+            {
+                "nome": "ATT",
+                "descrizione": "Assistenza per allestimento e consegna nell'ambito dell'attività promozionale di ATT.",
+                "immagine": "/img/clienti/att.jpg"
+            },
+            {
+                "nome": "UNICO S.P.A.",
+                "descrizione": "Logistica e trasporto a temperatura controllata prodotti farmaceutici.",
+                "immagine": "/img/clienti/unico.jpg"
+            },
+            {
+                "nome": "FONDAZIONE ANT",
+                "descrizione": "Logistica e facchinaggio nell'ambito dell'assistenza che Ant svolge per il paziente. Assistenza per allestimento e consegna nell'ambito dell'attività promozionale di Ant.",
+                "immagine": "/img/clienti/ant.jpg"
+            }
+        ]
+    },
+    {
+        "nome": "CONSULENZA PER PROFESSIONISTI ED IMPRESE DEL SETTORE EDILE",
+        "lista": [
+            {
+                "nome": "FAGNONI & ASSOCIATI",
+                "descrizione": "Consulenza tecnica nell'ambito della dell'impostazione e redazione del Computo Metrico Estimativo del progetto definitivo per la redazione dell'Ospedale Volano di Arezzo.",
+                "immagine": "/img/clienti/fagnoni.jpg"
+            },
+            {
+                "nome": "ARCHFLORENCE",
+                "descrizione": "Consulenza tecnica nell'ambito della dell'impostazione e redazione del Computo Metrico Estimativo del progetto esecutivo delle opere edili per la ristrutturazione del Palazzo Vivarelli Colonna di Firenze.",
+                "immagine": "/img/clienti/arch.jpg"
+            },
+            {
+                "nome": "TECNICAER",
+                "descrizione": "Consulenza tecnica nell'ambito della dell'impostazione e redazione del Computo Metrico Estimativo del progetto esecutivo delle opere edili per la ristrutturazione del secondo livello del padiglione D dell'Ospedale 'Cardarelli' di Napoli.",
+                "immagine": "/img/clienti/tecnicaer.jpg"
+            },
+            {
+                "nome": "ARCHITECNA",
+                "descrizione": "Consulenza tecnica nell'ambito della procedura per la determinazione del caro materiale di una grande commessa edile.",
+                "immagine": "/img/clienti/architecna.jpg"
+            },
+            {
+                "nome": "OPEN RESOURCES S.R.L.",
+                "descrizione": "Consulenza tecnico economica nell'ambito della valorizzazione e gestione di grandi commesse edili.",
+                "immagine": "/img/clienti/openresources.jpg"
+            },
+            {
+                "nome": "CMB",
+                "descrizione": "Consulenza tecnica nell'ambito della gestione della contabilità di grandi commesse edili con verifica di Computi Metrici Estimativi ed elaborazione di Perizie di Variante.",
+                "immagine": "/img/clienti/cmb.jpg"
+            },
+            {
+                "nome": "OVERALL GROUP",
+                "descrizione": "Consulenza tecnica nell'ambito della gestione della contabilità di commesse edili con verifica di Computi Metrici Estimativi ed elaborazione di Perizie di Variante.",
+                "immagine": "/img/clienti/overall.jpg"
+            }
+        ]
+    }
+]
