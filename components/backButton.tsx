@@ -7,7 +7,7 @@ function BackButton({}: Props) {
   const router = useRouter();
 
   return (
-    <button className="backbtn" onClick={() => router.back()}>
+    <button className="backbtn" onClick={() => router.push("/certificazioni")}>
       <IoIosArrowBack /> <span>Back</span>
     </button>
   );

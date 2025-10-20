@@ -4,12 +4,12 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import style from "./header.module.scss";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { TfiClose } from "react-icons/tfi";
 import heroImage from "/public/img/immagine_home.jpg";
 import { blurBaseHero } from "../src/app/utility";
+import { motion } from "motion/react";
 type Props = {};
 
 function Header({}: Props) {
@@ -32,16 +32,15 @@ function Header({}: Props) {
     nav1: [
       { name: "HOME", link: "/" },
       { name: "CONSORZIO", link: "/consorzio" },
+      { name: "SERVIZI", link: "/servizi" },
       { name: "CLIENTI", link: "/clienti" },
-      { name: "SANIFICAZIONE", link: "/sanificazione" },
-      { name: "BANDI", link: "/bandi" },
       { name: "CERTIFICAZIONI", link: "/certificazioni" },
-      { name: "INFORMAZIONI", link: "/informazioni" },
+      { name: "CONTATTI", link: "/contatti" },
     ],
     nav2: [
       { name: "Telefono:", link: "055/3987323", url: "+390553987323" },
       { name: "Mail:", link: "info@consorzio-cotraf.it" },
-      { name: "contattaci", link: "/informazioni" },
+      { name: "contattaci", link: "/contatti" },
     ],
   };
 
@@ -142,17 +141,43 @@ function Header({}: Props) {
           blurDataURL={blurBaseHero}
         />
         {headerheight() === "home" ? (
-          <div className={style.testoJumboHome}>
+          <motion.div
+            className={style.testoJumboHome}
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 1,
+              delay: 0,
+            }}
+          >
             <div className={style.subHead}>Il consorzio stabile</div>
             <h1 className="title">CO.TRA.F.</h1>
-            <p>
-              Da anni impegnati nell&apos;attività di: <br />
-              logistica e trasporto conto terzi, facchinaggio, pulizie,
-              <br />
-              servizi di igiene ambientale di vario tipo, come la manutenzione
-              cassonetti ed il lavaggio di mezzi di lavoro
-            </p>
-          </div>
+            <motion.h2
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 1,
+                delay: 0.5,
+              }}
+            >
+              STABILE PER VOCAZIONE
+            </motion.h2>
+            <motion.p
+              style={{ maxWidth: "900px" }}
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 1,
+                delay: 0.7,
+              }}
+            >
+              {" "}
+              IL CONSORZIO STABILE CO.TRA.F. è una realtà composta da imprese
+              che, con scopo mutualistico e comune struttura di impresa, si
+              occupa di promuovere, organizzare e coordinare le attività dei
+              soci nella partecipazione e gestione degli appalti.
+            </motion.p>
+          </motion.div>
         ) : (
           ""
         )}
