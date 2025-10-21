@@ -3,20 +3,37 @@
   position: relative;
   width: 100%;
   text-align: center;
-  padding: 60px 0;
+  padding: 50px 0;
+
+  .wrapperContent {
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    background-color: #3737379c;
+    padding: 1.5rem;
+    border-radius: 10px;
+  }
   img {
     z-index: -1;
+    object-fit: cover;
   }
   h2 {
     font-size: 2.5em;
     text-transform: uppercase;
     color: white;
-    margin-bottom: 24px;
-    margin-top: 0;
+    margin-bottom: 0;
+    margin-top: 1rem;
   }
   p {
     color: white;
-    margin-bottom: 24px;
+    font-size: 1.2rem;
+    margin: 0 0 1rem 0;
+  }
+  a {
+    color: white;
   }
   .btn {
     display: inline-block;
@@ -28,5 +45,9 @@
     text-decoration: none;
     cursor: pointer;
     border-radius: 8px;
+  }
+  .textContent {
+    flex: 1 1 400px;
+    padding: 20px;
   }
 }

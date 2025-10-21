@@ -14,7 +14,7 @@ function Consorzio({}: Props) {
   return (
     <LayoutPages>
       <h1>Informazioni</h1>
-      <div className={`${style.testoPagine} ${text.className}`}>
+      <div className={`testoPagine ${text.className}`}>
         <Form />
       </div>
     </LayoutPages>

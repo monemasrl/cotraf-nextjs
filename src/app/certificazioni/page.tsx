@@ -13,7 +13,7 @@ function Certificazioni({}: Props) {
   return (
     <LayoutPages>
       <h1>Certificazioni</h1>
-      <div className={`${style.testoPagine} ${text.className}`}>
+      <div className={`testoPagine ${text.className}`}>
         <ul>
           <li>
             <Link

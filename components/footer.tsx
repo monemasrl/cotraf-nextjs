@@ -19,8 +19,8 @@ function Footer({}: Props) {
       <div className={style.wrapper}>
         <div className={style.data}>
           <p>
-            © 2023 Consorzio stabile Co.tra.f. viale Montegrappa 13, Prato (PO)
-            - tutti i diritti riservati
+            © 2023 Consorzio stabile Co.tra.f. Piazza san Lorenzo 1, Firenze. -
+            tutti i diritti riservati
           </p>
           <p>p.iva 05070980486</p>
         </div>

@@ -1,12 +1,9 @@
-.testoPagine {
-  max-width: 751px;
-  ul {
-    padding-left: 1rem;
-  }
-  li {
-    list-style: disc;
+.clienti {
+  .nomeSettore {
     font-weight: bold;
-    font-size: 1rem;
-    line-height: 24px;
+    font-size: 30px;
+    margin-bottom: -7px;
+    margin-left: 2rem;
+    color: #c3c3c3;
   }
 }

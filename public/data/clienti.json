@@ -3,14 +3,14 @@
         "nome": "SETTORE AMBIENTE",
         "lista": [
             {
+                "nome": "HERA S.P.A.",
+                "descrizione": "Attività di facchinaggio e gestione magazzino presso le unità produttive del gruppo Hera. Manutenzione del verde e rimozione neve presso le sedi tecniche di Acegaaps e hestambiente.",
+                "immagine": "/img/clienti/hera.jpg"
+            },
+            {
                 "nome": "UNIFLOTTE S.R.L.",
                 "descrizione": "Attività di manutenzione e movimentazione contenitori stradali per rifiuto. Servizio di lavaggio automezzi per la raccolta e lo spazzamento e contenitori per rifiuto. Servizio di manutenzione, verniciatura e attività correlate di cassoni e elettro compattatori. Servizio di riparazione e rigenerazione contenitori stradali per rifiuti. Fornitura di contenitori per rifiuti speciali e ricambistica per contenitori stradali per rifiuto.",
                 "immagine": "/img/clienti/hera-flotte.jpg"
-            },
-            {
-                "nome": "ACEGAS APS AMGA S.P.A.",
-                "descrizione": "Attività di manutenzione e movimentazione contenitori stradali per rifiuto.",
-                "immagine": "/img/clienti/acegas.jpg"
             },
             {
                 "nome": "HERA AMBIENTE S.P.A.",
@@ -18,9 +18,9 @@
                 "immagine": "/img/clienti/hera-ambiente.jpg"
             },
             {
-                "nome": "HERA S.P.A.",
-                "descrizione": "Attività di facchinaggio e gestione magazzino presso le unità produttive del gruppo Hera. Manutenzione del verde e rimozione neve presso le sedi tecniche di Acegaaps e hestambiente.",
-                "immagine": "/img/clienti/hera.jpg"
+                "nome": "ACEGAS APS AMGA S.P.A.",
+                "descrizione": "Attività di manutenzione e movimentazione contenitori stradali per rifiuto.",
+                "immagine": "/img/clienti/acegas.jpg"
             },
             {
                 "nome": "ALIA SERVIZI AMBIENTALI S.P.A.",

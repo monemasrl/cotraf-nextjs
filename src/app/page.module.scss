@@ -19,7 +19,8 @@
     }
   }
   main {
-    max-width: 640px;
+    max-width: 1200px;
+    width: 100%;
   }
   p {
     font-size: 1rem;
@@ -29,9 +30,10 @@
     text-transform: uppercase;
   }
   h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     text-transform: uppercase;
     margin: 40px 0;
+    color: var(--title-color);
   }
 }
 main.home {

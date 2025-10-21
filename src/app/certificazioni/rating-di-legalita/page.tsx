@@ -15,7 +15,7 @@ function Legalita({}: Props) {
       <BackButton />
       <h1>Rating di legalità</h1>
 
-      <div className={`${style.testoPagine} ${text.className}`}>
+      <div className={`testoPagine ${text.className}`}>
         <ul>
           <li>
             <a

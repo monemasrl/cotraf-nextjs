@@ -1,35 +1,34 @@
 import React from "react";
+import Image from "next/image";
 import LayoutPages from "../layoutPages";
 import style from "./page.module.scss";
 import { Raleway } from "next/font/google";
 const text = Raleway({ subsets: ["latin"] });
-type Props = {};
+import ListaClienti from "../../../components/listaClienti";
+type Tdata = {
+  nome: string;
+  lista: { nome: string; descrizione: string; immagine: string }[];
+};
+import dataClienti from "../../../public/data/clienti.json";
+
 export const metadata = {
   title: "Consorzio Cotraf - clienti",
   description: "Consorzio Cotraf - clienti",
 };
-const data = [
-  "Uniflotte gruppo HERA spa",
-  "AgegasApsAmga gruppo",
-  "HERA spa",
-  "Cosea gruppo HERA spa",
-  "A2A spa",
-  "Iren Ambiente spa",
-  "SEI Toscana srl",
-  "ALIA spa",
-  "UNICO spa",
-  "ESTAR",
-  "ANT",
-];
-function Consorzio({}: Props) {
+
+const data: Tdata[] = dataClienti;
+
+function Consorzio() {
   return (
     <LayoutPages>
       <h1>Clienti</h1>
-      <div className={`${style.testoPagine} ${text.className}`}>
-        <h3>Principali Clienti</h3>
+      <div className={`testoPagine ${text.className} ${style.clienti}`}>
         <ul>
-          {data.map((item, index) => (
-            <li key={item}>{item}</li>
+          {data?.map((item, index) => (
+            <li key={index}>
+              <div className={style.nomeSettore}>{item.nome}</div>
+              <ListaClienti lista={item.lista} />
+            </li>
           ))}
         </ul>
       </div>

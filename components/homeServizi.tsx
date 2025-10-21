@@ -1,9 +1,10 @@
+"use client";
 import React from "react";
 import style from "./servizi.module.scss";
 import Image from "next/image";
 import { Montserrat } from "next/font/google";
 import divider from "/public/img/divider.svg";
-
+import { motion } from "motion/react";
 type servizi = {
   name: string;
   img: string;
@@ -68,7 +69,13 @@ function HomeServizi() {
         Istituti di Credito, insegne della GDO, plessi scolatici ed ospedalieri,
         caserme, piattaforme logistiche ed Aziende Multiutility.
       </p>
-      <div className={style.wrapperServizi}>
+      <motion.div
+        className={style.wrapperServizi}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1.5 }}
+      >
         {serviziSoft.map((item) => {
           if (item.name !== "EDILIZIA E IMPIANTISTICA") {
             return (
@@ -117,7 +124,7 @@ function HomeServizi() {
             );
           }
         })}
-      </div>
+      </motion.div>
     </section>
   );
 }

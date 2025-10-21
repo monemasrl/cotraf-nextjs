@@ -16,7 +16,7 @@ function Whitelist({}: Props) {
       <BackButton />
       <h1>Whitelist</h1>
 
-      <div className={`${style.testoPagine} ${text.className}`}>
+      <div className={`testoPagine ${text.className}`}>
         <ul>
           <li>
             <a

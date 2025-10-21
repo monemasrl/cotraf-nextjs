@@ -12,7 +12,7 @@ function Bandi({}: Props) {
   return (
     <LayoutPages>
       <h1>Bandi</h1>
-      <div className={`${style.testoPagine} ${text.className}`}>
+      <div className={`testoPagine ${text.className}`}>
         <p>
           il Consorzio Stabile Co.Tra.F. si occupa di cercare e monitorare tutte
           le opportunità in termini di finanziamenti, contributi ed agevolazioni

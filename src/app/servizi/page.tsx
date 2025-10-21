@@ -24,7 +24,7 @@ function Consorzio({}: Props) {
   return (
     <LayoutPages>
       <h1>Consorzio</h1>
-      <div className={`${style.testoPagine} ${text.className}`}>
+      <div className={`testoPagine ${text.className}`}>
         {data.map((item, index) => (
           <>
             <h3>{item.titolo}</h3>

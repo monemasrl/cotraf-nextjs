@@ -16,7 +16,7 @@ function Sociale({}: Props) {
       {" "}
       <BackButton />
       <h1>Responsabilità sociale</h1>
-      <div className={`${style.testoPagine} ${text.className}`}>
+      <div className={`testoPagine ${text.className}`}>
         <h3>Politica per la Responsabilità Sociale </h3>
         <p>
           L&rsquo;Azienda ha definito una politica per la qualità,

@@ -19,7 +19,7 @@ function Iso({}: Props) {
         ISO 45001:2018
       </h1>
 
-      <div className={`${style.testoPagine} ${text.className}`}>
+      <div className={`testoPagine ${text.className}`}>
         <p>
           Il Consorzio Stabile COTRAF ha implementato un Sistema di Gestione
           Integrato Ambiente, Sicurezza, Responsabilità Sociale, Qualità

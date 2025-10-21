@@ -7,7 +7,6 @@ function LayoutPages({ children }: { children: React.ReactNode }) {
   return (
     <div className={style.wrapperPages}>
       <main>{children}</main>
-      <Sidebar />
     </div>
   );
 }

@@ -14,7 +14,7 @@ function Consorzio({}: Props) {
   return (
     <LayoutPages>
       <h1>Sanificazione</h1>
-      <div className={`${style.testoPagine} ${text.className}`}>
+      <div className={`testoPagine ${text.className}`}>
         <p>
           Il nostro Paese e il mondo intero stanno attraversando un periodo di
           grave emergenza sanitaria ed è anche per questo che il consorzio
