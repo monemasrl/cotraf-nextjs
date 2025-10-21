@@ -30,7 +30,6 @@ function Header({}: Props) {
 
   const data = {
     nav1: [
-      { name: "HOME", link: "/" },
       { name: "CONSORZIO", link: "/consorzio" },
       { name: "SERVIZI", link: "/servizi" },
       { name: "CLIENTI", link: "/clienti" },

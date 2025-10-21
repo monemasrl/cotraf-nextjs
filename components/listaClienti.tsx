@@ -3,8 +3,8 @@ import React from "react";
 import { motion } from "motion/react";
 import style from "./listaClienti.module.scss";
 import Image from "next/image";
-type Tlista = { nome: string; descrizione: string; immagine: string }[];
-function ListaClienti({ lista }: { lista: Tlista }) {
+type Tlista = { nome: string; descrizione?: string; immagine: string }[];
+function ListaClienti({ lista, margin }: { lista: Tlista; margin?: string }) {
   return (
     <motion.ul
       initial={{ opacity: 0, y: 20 }}
@@ -12,6 +12,7 @@ function ListaClienti({ lista }: { lista: Tlista }) {
       viewport={{ once: true }}
       transition={{ duration: 1 }}
       className={style.listaClienti}
+      style={margin ? { margin: margin } : {}}
     >
       {lista.map((cliente, idx) =>
         cliente.nome ? (
@@ -25,7 +26,7 @@ function ListaClienti({ lista }: { lista: Tlista }) {
                 height={100}
               />
             ) : null}
-            <div>{cliente.nome}</div>
+            <div className={style.nomeCliente}>{cliente.nome}</div>
             <p>{cliente.descrizione ? cliente.descrizione : ""}</p>
           </li>
         ) : null

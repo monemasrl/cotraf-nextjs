@@ -37,7 +37,8 @@
   }
 }
 main.home {
-  position: relative;
-  max-width: 1165px;
-  margin: 0 auto;
+  h2 {
+    font-size: 2.5rem;
+    color: var(--title-color);
+  }
 }

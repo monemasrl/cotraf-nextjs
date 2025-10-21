@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Montserrat } from "next/font/google";
 import divider from "/public/img/divider.svg";
 import { motion } from "motion/react";
+import servizi from "../public/data/servizi.json";
 type servizi = {
   name: string;
   img: string;
@@ -13,50 +14,7 @@ type servizi = {
 const title = Montserrat({ subsets: ["latin"] });
 
 function HomeServizi() {
-  const serviziSoft: servizi[] = [
-    {
-      name: "TRASLOCHI ",
-      img: "/img/icons/logistica.png",
-      text: "Servizi di Logistica (trasporto, trasloco, facchinaggio, gestione magazzini)",
-    },
-    {
-      name: "SERVIZI AMBIENTALI",
-      img: "/img/icons/ambiente.png",
-      text: "Servizi ambientali e gestione rifiuti, gestione aree a verde, verde urbano e non",
-    },
-    {
-      name: "TRASPORTO",
-      img: "/img/icons/trasporti.png",
-      text: "Servizi di trasporto a temperatura controllata",
-    },
-    {
-      name: "AMMINISTRAZIONE E GESTIONE",
-      img: "/img/icons/amministrazione.png",
-      text: "Ristorazione collettiva: gestione mense aziendali e scolastiche, servizi di portierato, front office, back office, servizi amministrativi",
-    },
-    {
-      name: "IMPIANTI DI SMALTIMENTO",
-      img: "/img/icons/smaltimento.png",
-      text: "Servizi di gestione Impianti di selezione e smaltimento dei rifiuti",
-    },
-    {
-      name: "RIFIUTI",
-      img: "/img/icons/rifiuti.png",
-      text: "Servizi di Igiene (pulizia, sanificazione, disinfezione, disinfestazione,derattizzazione, bonifiche ambientali in genere), servizi di gestione e manutenzione parchi contenitori per raccolta di RSU, servizi di gestione rifiuti",
-    },
-    {
-      name: "EDILIZIA E IMPIANTISTICA",
-      img: "/img/icons/edilizia.png",
-      text: [
-        "Lavori Edili",
-        "Lavori di Impiantistica Elettrica speciali",
-        "Lavori di Impiantistica Idraulica",
-        "Lavori di Impiantistica Meccanica",
-        "Lavori Stradali",
-        "Restauro/Manutenzioni immobili sottoposti a tutela",
-      ],
-    },
-  ];
+  const serviziSoft: servizi[] = servizi;
 
   return (
     <section className={style.servizi}>

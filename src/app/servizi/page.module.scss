@@ -1,3 +1,23 @@
-.testoPagine {
-  max-width: 751px;
+.serviziContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+  p {
+    columns: 2;
+    @media screen and (max-width: 768px) {
+      columns: 1;
+    }
+  }
+  ul li {
+    line-height: 1.8;
+    font-weight: bold;
+  }
+
+  .servizi {
+    flex: 1;
+  }
 }

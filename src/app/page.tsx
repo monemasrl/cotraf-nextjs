@@ -5,6 +5,7 @@ const inter = Raleway({ subsets: ["latin"] });
 import clientiData from "../../public/data/clienti.json";
 import LoghiHome from "../../components/LoghiHome";
 import HomeNumeri from "../../components/homeNumeri";
+import style from "./page.module.scss";
 const numeri = [
   { numero: 9, descrizione: "Consorziati", from: 0 },
   { numero: 3500, descrizione: "Dipendenti", from: 3000 },
@@ -24,7 +25,7 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-      <main className={`home ${inter.className}`}>
+      <main className={`${style.home} ${inter.className}`}>
         <HomeServizi />
         <HomeNumeri numeri={numeri} />
         <LoghiHome loghi={clientiData} />

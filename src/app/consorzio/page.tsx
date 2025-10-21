@@ -3,6 +3,7 @@ import LayoutPages from "../layoutPages";
 import style from "./page.module.scss";
 import Timeline from "../../../components/timeline";
 import { Raleway } from "next/font/google";
+import ListaClienti from "../../../components/listaClienti";
 const text = Raleway({ subsets: ["latin"] });
 type Props = {};
 export const metadata = {
@@ -21,12 +22,22 @@ const consorziati = {
   testo:
     "Ad oggi CO.TRA.F. conta 9 aziende consorziate, tutte operanti nei settori dei servizi ambientali, della logistica, del trasporto a temperatura controllata, dell’amministrazione e gestione di mense aziendali e scolastiche, del portierato e dei servizi amministrativi, nonché del settore edile e della manutenzione immobiliare. La compagine sociale è in continua evoluzione ed espansione, con l’obiettivo di ampliare ulteriormente il ventaglio di servizi offerti ai propri clienti.",
   consorziati: [
-    "Coop. San Giorgio (FI) - Servizi ambientali e gestione rifiuti",
-    "Coop. Il Faro (FI) - Servizi ambientali e gestione rifiuti",
-    "Coop. Il Quadrifoglio (FI) - Servizi ambientali e gestione rifiuti",
-    "Coop. La Fenice (FI) - Servizi ambientali e gestione rifiuti",
-    "Coop. Il Sentiero (FI) - Servizi ambientali e gestione rifiuti",
-    "Coop. Il Villaggio (FI) - Servizi ambientali e gestione rifiuti",
+    { nome: "ASSOLOG S.R.L.", immagine: "/img/consorziate/assolog.png" },
+    {
+      nome: "MELLON SOCIETA’ COOPERATIVA",
+      immagine: "/img/consorziate/mellon.png",
+    },
+    {
+      nome: "CRISTOFORO SOCIETA’ COOPERATIVA SOCIALE ONLUS",
+      immagine: "/img/consorziate/cristoforo.png",
+    },
+    { nome: "FI.R.MA S.R.L.", immagine: "/img/consorziate/firma.png" },
+    {
+      nome: "TOP COSTRUZIONI S.R.L.",
+      immagine: "/img/consorziate/top.png",
+    },
+    { nome: "KAIROS S.R.L.", immagine: "/img/consorziate/kairos.png" },
+    { nome: "SICUREL S.R.L.", immagine: "/img/consorziate/sicurel.png" },
   ],
 };
 const storia = [
@@ -69,11 +80,7 @@ function Consorzio({}: Props) {
         className={`testoPagine ${text.className} ${style.consorziatiSection}`}
       >
         <p>{consorziati.testo}</p>
-        <ul className={style.consorziati}>
-          {consorziati.consorziati.map((item, index) => (
-            <li key={index}>{item}</li>
-          ))}
-        </ul>
+        <ListaClienti lista={consorziati.consorziati} margin="3rem 0 0 0" />
       </div>
     </LayoutPages>
   );

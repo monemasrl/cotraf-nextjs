@@ -1,3 +1,18 @@
-.testoPagine {
-  max-width: 751px;
+.contattiContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 2rem;
+  .contattiForm {
+    flex: 0 1 600px;
+  }
+  
+  .contattiInfo {
+    flex: 1;
+    min-width: 300px;
+    
+    .mapContainer {
+      margin-top: 2rem;
+    }
+  }
 }
