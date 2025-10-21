@@ -1,0 +1,22 @@
+.mainTesto {
+  columns: 2;
+  @media screen and (max-width: 768px) {
+    columns: 1;
+  }
+}
+.consorziatiSection {
+  p {
+    columns: 2;
+    @media screen and (max-width: 768px) {
+      columns: 1;
+    }
+  }
+  .consorziati {
+    padding-left: 0;
+    margin-left: 0;
+  }
+  .consorziati li {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+}

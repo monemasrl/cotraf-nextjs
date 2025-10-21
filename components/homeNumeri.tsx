@@ -31,8 +31,8 @@ function NumeroAnimato({ numero, index }: { numero: Tnumeri; index: number }) {
     <div className={style.numeroContainer}>
       <div className={style.descrizione}>{numero.descrizione}</div>
       <motion.div
-        initial={{ filter: "blur(10px)", y: 20 }}
-        whileInView={{ filter: "blur(0px)", y: 0 }}
+        initial={{ filter: "blur(5px)" }}
+        whileInView={{ filter: "blur(0px)" }}
         onViewportEnter={handleViewportEnter}
         viewport={{ once: true }}
         transition={{ duration: 1, delay: index * 0.2 }}

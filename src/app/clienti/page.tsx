@@ -18,7 +18,7 @@ export const metadata = {
 
 const data: Tdata[] = dataClienti;
 
-function Consorzio() {
+function Clienti() {
   return (
     <LayoutPages>
       <h1>Clienti</h1>
@@ -36,4 +36,4 @@ function Consorzio() {
   );
 }
 
-export default Consorzio;
+export default Clienti;

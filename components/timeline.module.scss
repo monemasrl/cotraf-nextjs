@@ -17,9 +17,9 @@
   position: absolute;
   left: -10px;
   top: 0;
-  width: 10px;
-  height: 10px;
-  background-color: #0070f3;
+  width: 12px;
+  height: 12px;
+  background-color: var(--title-color);
   border-radius: 50%;
 }
 .timelineItem:last-child::after {
@@ -38,12 +38,13 @@
   top: 10px;
   width: 2px;
   height: calc(100% - 10px);
-  background-color: #0070f3;
+  background-color: var(--title-color);
 }
 .timelineDate {
   font-weight: bold;
   margin-bottom: 5px;
   font-size: 2rem;
+  margin-left: 1rem;
 }
 .timelineContent {
   padding-left: 10px;
