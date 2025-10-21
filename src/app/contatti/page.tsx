@@ -3,7 +3,7 @@ import LayoutPages from "../layoutPages";
 import style from "./page.module.scss";
 import { Raleway } from "next/font/google";
 import Form from "../../../components/form";
-import MapComponent from "../../../components/mapComponent";
+import SimpleMap from "../../../components/simpleMap";
 
 const text = Raleway({ subsets: ["latin"] });
 type Props = {};
@@ -17,7 +17,7 @@ function Consorzio({}: Props) {
       <h1>Informazioni</h1>
 
       <div className={style.mapContainer}>
-        <MapComponent address="Piazza san Lorenzo 1, Firenze" />
+        <SimpleMap address="Piazza san Lorenzo 1, Firenze" />
       </div>
       <h2>Contatti</h2>
       <div className={` ${text.className} ${style.contattiContainer}`}>

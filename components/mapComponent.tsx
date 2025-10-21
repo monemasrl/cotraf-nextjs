@@ -1,20 +1,6 @@
 "use client";
-import React, { useEffect, useRef } from "react";
-import L from "leaflet";
-// @ts-ignore: CSS import without type declarations
-import "leaflet/dist/leaflet.css";
+import React, { useEffect, useRef, useState } from "react";
 import style from "./mapComponent.module.scss";
-
-// Fix per le icone di Leaflet in Next.js
-delete (L.Icon.Default.prototype as any)._getIconUrl;
-L.Icon.Default.mergeOptions({
-  iconRetinaUrl:
-    "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png",
-  iconUrl:
-    "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png",
-  shadowUrl:
-    "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png",
-});
 
 interface MapComponentProps {
   address?: string;
@@ -26,43 +12,86 @@ const MapComponent: React.FC<MapComponentProps> = ({
   className,
 }) => {
   const mapRef = useRef<HTMLDivElement>(null);
-  const mapInstanceRef = useRef<L.Map | null>(null);
+  const mapInstanceRef = useRef<any>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    if (!mapRef.current) return;
+    if (typeof window === "undefined") return;
 
-    // Coordinate di Piazza San Lorenzo, Firenze
-    const lat = 43.7744;
-    const lng = 11.2556;
+    const initializeMap = async () => {
+      try {
+        // Importa Leaflet
+        const L = (await import("leaflet")).default;
 
-    // Inizializza la mappa
-    const map = L.map(mapRef.current).setView([lat, lng], 16);
+        // Carica CSS se non già presente
+        if (!document.querySelector('link[href*="leaflet"]')) {
+          const link = document.createElement("link");
+          link.rel = "stylesheet";
+          link.href = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
+          document.head.appendChild(link);
+        }
 
-    // Aggiungi il layer OpenStreetMap
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      attribution:
-        '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-    }).addTo(map);
+        // Aspetta un momento per il DOM
+        await new Promise((resolve) => setTimeout(resolve, 500));
 
-    // Aggiungi un marker per l'indirizzo
-    const marker = L.marker([lat, lng]).addTo(map);
+        if (!mapRef.current) {
+          setError("Elemento mappa non trovato");
+          setIsLoading(false);
+          return;
+        }
 
-    // Aggiungi un popup con l'indirizzo
-    marker
-      .bindPopup(
+        // Pulisci container se esiste già una mappa
+        mapRef.current.innerHTML = "";
+
+        // Configura icone
+        delete (L.Icon.Default.prototype as any)._getIconUrl;
+        L.Icon.Default.mergeOptions({
+          iconRetinaUrl:
+            "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png",
+          iconUrl:
+            "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
+          shadowUrl:
+            "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
+        });
+
+        // Coordinate Piazza San Lorenzo, Firenze
+        const coordinates: [number, number] = [43.7744, 11.2556];
+
+        // Crea mappa
+        const map = L.map(mapRef.current).setView(coordinates, 16);
+
+        // Aggiungi tiles
+        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+          attribution: "© OpenStreetMap contributors",
+        }).addTo(map);
+
+        // Aggiungi marker
+        const marker = L.marker(coordinates).addTo(map);
+        marker
+          .bindPopup(
+            `
+          <div style="text-align: center;">
+            <strong>Consorzio Cotraf</strong><br/>
+            ${address}<br/>
+            <small>P.IVA: 05070980486</small>
+          </div>
         `
-      <div style="text-align: center;">
-        <strong>Consorzio Cotraf</strong><br/>
-        ${address}<br/>
+          )
+          .openPopup();
 
-      </div>
-    `
-      )
-      .openPopup();
+        mapInstanceRef.current = map;
+        setIsLoading(false);
+        setError(null);
+      } catch (err) {
+        console.error("Errore mappa:", err);
+        setError("Impossibile caricare la mappa");
+        setIsLoading(false);
+      }
+    };
 
-    mapInstanceRef.current = map;
+    initializeMap();
 
-    // Cleanup
     return () => {
       if (mapInstanceRef.current) {
         mapInstanceRef.current.remove();
@@ -70,6 +99,41 @@ const MapComponent: React.FC<MapComponentProps> = ({
       }
     };
   }, [address]);
+
+  if (error) {
+    return (
+      <div className={`${style.mapContainer} ${className || ""}`}>
+        <div className={style.loadingContainer}>
+          <p style={{ color: "#dc3545" }}>❌ {error}</p>
+          <button
+            onClick={() => window.location.reload()}
+            style={{
+              padding: "8px 16px",
+              background: "#007bff",
+              color: "white",
+              border: "none",
+              borderRadius: "4px",
+              cursor: "pointer",
+              marginTop: "10px",
+            }}
+          >
+            Ricarica pagina
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  if (isLoading) {
+    return (
+      <div className={`${style.mapContainer} ${className || ""}`}>
+        <div className={style.loadingContainer}>
+          <div className={style.spinner}></div>
+          <p>Caricamento mappa...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div ref={mapRef} className={`${style.mapContainer} ${className || ""}`} />
