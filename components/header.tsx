@@ -130,6 +130,11 @@ function Header({}: Props) {
         </nav>
       </div>
       <div className={style.wrapperJumbo}>
+        {headerheight() !== "home" ? (
+          <div className={style.jumboOverlay}></div>
+        ) : (
+          ""
+        )}
         <Image
           className={style.headerImage}
           src={heroImage}

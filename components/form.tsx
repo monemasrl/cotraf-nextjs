@@ -97,6 +97,7 @@ function Form({}: Props) {
           type="text"
           name="ragionesociale"
           id="ragionesociale"
+          autoComplete="organization"
           required
         />
       </p>
@@ -107,6 +108,7 @@ function Form({}: Props) {
           type="email"
           name="email"
           id="youremail"
+          autoComplete="email"
           required
         />
       </p>
@@ -117,7 +119,7 @@ function Form({}: Props) {
           type="tel"
           name="phone"
           id="phone"
-          required
+          autoComplete="tel"
         />
       </p>
       <p>
@@ -128,6 +130,7 @@ function Form({}: Props) {
           }}
           name="message"
           id="yourmessage"
+          autoComplete="off"
           required
         ></textarea>
       </p>
