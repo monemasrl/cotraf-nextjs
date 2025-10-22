@@ -14,6 +14,20 @@ function Certificazioni({}: Props) {
     <LayoutPages>
       <h1>Certificazioni</h1>
       <div className={` ${text.className}`}>
+        <p>
+          CO.TRA.F. ha da sempre un’organizzazione comune d’impresa che coordina
+          le attività delle consorziate promuovendone sviluppo e
+          razionalizzazione. I servizi, lavori e forniture vengono affidati ed
+          eseguiti dalle consorziate stesse senza ricorrere strategicamente al
+          subappalto o altri uffici di avvalimento se non ove strettamente
+          necessario al buon esito della procedura. Per rispondere all’alto
+          livello di richieste delle committenze pubbliche e private,
+          specialmente nell’ultimo decennio, il Consorzio si è dotato di un
+          corredo di certificazioni ampio e completo. Dal 25/07/2020 Certificati
+          ISO 9001, ISO 14000, ISO 45000, dal 09/01/2023 SA 8000 s.a.s.,
+          UNI/PdR125:2020. Inoltre dal 02/08/2023 ha ottenuto l’Attestazione SOA
+          nelle categorie OG1 OG2 OG3 OG8 OG9 OG12 OS6 OS28 OS30. OS30.
+        </p>
         <ul className={style.certificazioni}>
           <li>
             <div className={style.certificazioneTitle}>
