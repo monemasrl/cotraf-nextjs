@@ -52,28 +52,8 @@ function Header({}: Props) {
 
   return (
     <header className={`${headerheight() === "home" ? "" : style.page}`}>
-      <div className={style.navWrapper}>
-        <nav className={style.secondaryNav}>
-          <ul>
-            <li>
-              <a href={`tel:${data.nav2[0].url}`}>
-                <span> {data.nav2[0].name}</span> {data.nav2[0].link}
-              </a>
-            </li>
-            <li>
-              <a href={`mailto:${data.nav2[1].link}`}>
-                <span> {data.nav2[1].name}</span> {data.nav2[1].link}
-              </a>
-            </li>
-
-            <li>
-              <Link className="button" href={data.nav2[2].link}>
-                {data.nav2[2].name}
-              </Link>
-            </li>
-          </ul>
-        </nav>
-        <nav className={`${style.mainNav} ${mobileMenu ? style.mobile : ""}`}>
+      <div className={style.fullwidthNav}>
+        <div className={style.navWrapper}>
           <Link className={style.logoMainNav} href="/">
             <Image
               src="/img/logo_cotraf_bianco.png"
@@ -83,55 +63,81 @@ function Header({}: Props) {
               priority={true}
             />
           </Link>
-          {mobile && (
-            <div className={style.menuIcon} onClick={() => setMobileMenu(true)}>
-              <GiHamburgerMenu />
-            </div>
-          )}
-          <ul>
-            {mobile && (
-              <li
-                className={style.menuIconClose}
-                onClick={() => setMobileMenu(false)}
-              >
-                <TfiClose />
-              </li>
-            )}
-            {data.nav1.map((item) => {
-              return (
-                <li key={item.name}>
-                  {" "}
-                  <Link href={item.link}>
-                    {pathname.includes(item.link) && item.link.length > 1 && (
-                      <motion.span
-                        layoutId={animationLineInMenuMobile()}
-                        className={style.navUnderline}
-                      ></motion.span>
-                    )}
-                    {item.name}
+
+          <div className={style.navContainer}>
+            <nav className={style.secondaryNav}>
+              <ul>
+                <li>
+                  <a href={`tel:${data.nav2[0].url}`}>
+                    <span> {data.nav2[0].name}</span> {data.nav2[0].link}
+                  </a>
+                </li>
+                <li>
+                  <a href={`mailto:${data.nav2[1].link}`}>
+                    <span> {data.nav2[1].name}</span> {data.nav2[1].link}
+                  </a>
+                </li>
+                <li>
+                  <Link className="button" href={data.nav2[2].link}>
+                    {data.nav2[2].name}
                   </Link>
                 </li>
-              );
-            })}
-            <li className={style.info}>
-              <a href={`tel:${data.nav2[0].url}`}>
-                <span> {data.nav2[0].name}</span> {data.nav2[0].link}
-              </a>
-
-              <a href={`mailto:${data.nav2[1].link}`}>
-                <span> {data.nav2[1].name}</span> {data.nav2[1].link}
-              </a>
-
-              <Link className={style.button} href={data.nav2[2].link}>
-                {data.nav2[2].name}
-              </Link>
-            </li>
-          </ul>
-        </nav>
+              </ul>
+            </nav>
+            <nav
+              className={`${style.mainNav} ${mobileMenu ? style.mobile : ""}`}
+            >
+              {mobile && (
+                <div
+                  className={style.menuIcon}
+                  onClick={() => setMobileMenu(true)}
+                >
+                  <GiHamburgerMenu />
+                </div>
+              )}
+              <ul>
+                {mobile && (
+                  <li
+                    className={style.menuIconClose}
+                    onClick={() => setMobileMenu(false)}
+                  >
+                    <TfiClose />
+                  </li>
+                )}
+                {data.nav1.map((item) => {
+                  return (
+                    <li key={item.name}>
+                      {" "}
+                      <Link href={item.link}>
+                        {pathname.includes(item.link) &&
+                          item.link.length > 1 && (
+                            <motion.span
+                              layoutId={animationLineInMenuMobile()}
+                              className={style.navUnderline}
+                            ></motion.span>
+                          )}
+                        {item.name}
+                      </Link>
+                    </li>
+                  );
+                })}
+                <li className={style.info}>
+                  <a href={`tel:${data.nav2[0].url}`}>
+                    <span> {data.nav2[0].name}</span> {data.nav2[0].link}
+                  </a>
+                  <a href={`mailto:${data.nav2[1].link}`}>
+                    <span> {data.nav2[1].name}</span> {data.nav2[1].link}
+                  </a>
+                  <Link className={style.button} href={data.nav2[2].link}>
+                    {data.nav2[2].name}
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
       </div>
       <div className={style.wrapperJumbo}>
-        <div className={style.jumboOverlay}></div>
-        {/* 
         <Image
           className={style.headerImage}
           src={heroImage}
@@ -140,7 +146,7 @@ function Header({}: Props) {
           priority={true}
           placeholder="blur"
           blurDataURL={blurBaseHero}
-        /> */}
+        />
         {headerheight() === "home" ? (
           <motion.div
             className={style.testoJumboHome}
