@@ -1,5 +1,5 @@
 :root {
-  --title-color: #fbb900;
+  --title-color: #c57f00;
   --text-color: #1b1b1b;
   --font-family: "Montserrat", sans-serif;
   --font-size-base: 16px;
@@ -38,7 +38,7 @@ header {
 .button {
   border-radius: 5px;
   width: auto;
-  background-color: #cca817;
+  border: 2px solid #cca817;
   padding: 2px 18px;
   color: #fff;
   display: block;
