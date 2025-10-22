@@ -38,6 +38,9 @@ form.form {
     padding: 1rem 2rem;
     float: right;
     cursor: pointer;
+    &:disabled {
+      cursor: not-allowed;
+    }
   }
   .error {
     font-size: 0.9rem;
