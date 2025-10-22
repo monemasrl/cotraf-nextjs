@@ -19,9 +19,9 @@ export default function NotFound() {
           La pagina che stai cercando non esiste o è stata spostata.
         </p>
         <div className={style.actions}>
-          <Link href="/" className={style.homeButton}>
+          <a href="/" className={style.homeButton}>
             Torna alla Home
-          </Link>
+          </a>
           <Link href="/contatti" className={style.contactButton}>
             Contattaci
           </Link>

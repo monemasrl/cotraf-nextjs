@@ -46,21 +46,25 @@ function NumeroAnimato({ numero, index }: { numero: Tnumeri; index: number }) {
 
 function HomeNumeri({ numeri }: { numeri: Tnumeri[] }) {
   return (
-    <div className={style.numeriwrapper}>
-      <p className="claim">
-        Sono i numeri che fanno del consorzio Stabile <strong>CO.TRA.F.</strong>{" "}
-        una realtà capace di affrontare la sfida di servizi erogati direttamente
-        e completamente dalle consorziate indicate come affidatarie, con
-        strumenti, metodi e personale propri di quest’ultime. I vantaggi per il
-        committente e cliente sono l’individuazione chiara del fornitore del
-        servizio, un’assistenza precisa e puntuale per qualsiasi necessità,
-        l’individuazione di costi certi e una qualità migliore garantita da
-        esperienza e competenza.
-      </p>
-      <div className={style.homeNumeri}>
-        {numeri.map((item, index) => (
-          <NumeroAnimato numero={item} key={index} index={index} />
-        ))}
+    <div className={style.numeriContainer}>
+      <div className={style.numeriwrapper}>
+        <h2>I numeri di co.tra.f.</h2>
+        <p className="claim">
+          Sono i numeri che fanno del consorzio Stabile{" "}
+          <strong>CO.TRA.F.</strong> una realtà capace di affrontare la sfida di
+          servizi erogati direttamente e completamente dalle consorziate
+          indicate come affidatarie, con strumenti, metodi e personale propri di
+          quest’ultime. I vantaggi per il committente e cliente sono
+          l’individuazione chiara del fornitore del servizio, un’assistenza
+          precisa e puntuale per qualsiasi necessità, l’individuazione di costi
+          certi e una qualità migliore garantita da esperienza e competenza.
+        </p>
+
+        <div className={style.homeNumeri}>
+          {numeri.map((item, index) => (
+            <NumeroAnimato numero={item} key={index} index={index} />
+          ))}
+        </div>
       </div>
     </div>
   );

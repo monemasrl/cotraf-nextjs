@@ -8,13 +8,13 @@
   .wrapperContent {
     display: flex;
     flex-wrap: wrap;
-    z-index: 1;
     max-width: 1200px;
     margin: 0 auto;
     align-items: center;
-    background-color: #3737379c;
+    background-color: rgb(55 55 55 / 97%);
     padding: 1.5rem;
     border-radius: 10px;
+    gap: 1rem;
   }
   img {
     z-index: -1;
