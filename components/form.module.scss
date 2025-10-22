@@ -40,6 +40,8 @@ form.form {
     cursor: pointer;
     &:disabled {
       cursor: not-allowed;
+      color: white;
+      background-color: gray;
     }
   }
   .error {
