@@ -5,8 +5,9 @@ import { Raleway } from "next/font/google";
 const text = Raleway({ subsets: ["latin"] });
 type Props = {};
 export const metadata = {
-  title: "Consorzio Cotraf - consorzio",
-  description: "Consorzio Cotraf - consorzio",
+  title: "Consorzio Cotraf - aziende consorziate",
+  description:
+    " Il Consorzio intende inoltre promuovere la collaborazione e le sinergie tra le aziende consorziate, la trasmissione del know-how sui servizi svolti, la capacità di individuare sempre nuovi canali di sviluppo e competenze su possibili opportunità per la crescita delle consorziate stesse.",
 };
 const data = [
   {

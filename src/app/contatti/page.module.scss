@@ -2,8 +2,16 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  gap: 2rem;
+  gap: 5rem;
   .contattiForm {
     flex: 0 1 600px;
+  }
+  p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-top: 0;
+  }
+  h2 {
+    margin-bottom: 1rem;
   }
 }

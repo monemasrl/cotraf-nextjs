@@ -8,8 +8,8 @@ import SimpleMap from "../../../components/simpleMap";
 const text = Raleway({ subsets: ["latin"] });
 type Props = {};
 export const metadata = {
-  title: "Consorzio Cotraf - informazioni",
-  description: "Consorzio Cotraf - informazioni",
+  title: "Consorzio Cotraf - contatti",
+  description: "Consorzio Cotraf - contatti",
 };
 function Consorzio({}: Props) {
   return (
@@ -25,9 +25,8 @@ function Consorzio({}: Props) {
           <Form />
         </div>
         <div className={style.contattiInfo}>
+          <h2>Consorzio Cotraf</h2>
           <p>
-            <strong>Consorzio Cotraf</strong>
-            <br />
             Piazza san Lorenzo 1, Firenze
             <br />
             P.IVA: 05070980486
