@@ -156,6 +156,7 @@ function Header({}: Props) {
               duration: 1,
               delay: 0,
             }}
+            aria-hidden="true"
           >
             <div className={style.subHead}>Il consorzio stabile</div>
             <h1 className="title">CO.TRA.F.</h1>
