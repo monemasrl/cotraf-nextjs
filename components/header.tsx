@@ -131,7 +131,7 @@ function Header({}: Props) {
       </div>
       <div className={style.wrapperJumbo}>
         <div className={style.jumboOverlay}></div>
-
+        {/* 
         <Image
           className={style.headerImage}
           src={heroImage}
@@ -140,7 +140,7 @@ function Header({}: Props) {
           priority={true}
           placeholder="blur"
           blurDataURL={blurBaseHero}
-        />
+        /> */}
         {headerheight() === "home" ? (
           <motion.div
             className={style.testoJumboHome}
