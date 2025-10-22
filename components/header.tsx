@@ -170,21 +170,6 @@ function Header({}: Props) {
             >
               STABILE PER VOCAZIONE
             </motion.h2>
-            <motion.p
-              style={{ maxWidth: "900px" }}
-              initial={{ opacity: 0, y: 100 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 1,
-                delay: 0.7,
-              }}
-            >
-              {" "}
-              IL CONSORZIO STABILE CO.TRA.F. è una realtà composta da imprese
-              che, con scopo mutualistico e comune struttura di impresa, si
-              occupa di promuovere, organizzare e coordinare le attività dei
-              soci nella partecipazione e gestione degli appalti.
-            </motion.p>
           </motion.div>
         ) : (
           ""
