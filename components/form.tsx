@@ -137,7 +137,7 @@ function Form({}: Props) {
       </p>
       <p className={style.privacy}>
         <label htmlFor="privacy">
-          accettazione{" "}
+          Accettazione{" "}
           <a target="_blank" href={"/privacy"} rel="noopener noreferrer">
             privacy
           </a>
