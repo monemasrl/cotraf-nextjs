@@ -48,4 +48,19 @@ form.form {
     font-size: 0.9rem;
     color: red;
   }
+  .privacy {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    label {
+      font-size: 0.9rem;
+    }
+    input {
+      width: auto;
+      height: auto;
+    }
+  }
 }

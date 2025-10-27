@@ -42,7 +42,7 @@ function Certificazioni({}: Props) {
           corredo di certificazioni ampio e completo. Dal 25/07/2020 Certificati
           ISO 9001, ISO 14000, ISO 45000, dal 09/01/2023 SA 8000 s.a.s.,
           UNI/PdR125:2020. Inoltre dal 02/08/2023 ha ottenuto l’Attestazione SOA
-          nelle categorie OG1 OG2 OG3 OG8 OG9 OG12 OS6 OS28 OS30. OS30.
+          nelle categorie OG1 OG2 OG3 OG8 OG9 OS28.
         </p>
         <ul className={style.certificazioni}>
           <li>
@@ -60,7 +60,7 @@ function Certificazioni({}: Props) {
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="/pdf/certificazioni2025/Attestazione_SOA_COTRAF_250402.pdf"
+                  href="/pdf/certificazioni2025/Attestazione_SOA_COTRAF_251003.pdf"
                 >
                   <span>{pdfIcon}</span> Link alla certificazione
                 </a>

@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import style from "./form.module.scss";
+import Link from "next/link";
 type Props = {};
 
 function SuccessMessage() {
@@ -133,6 +134,15 @@ function Form({}: Props) {
           autoComplete="off"
           required
         ></textarea>
+      </p>
+      <p className={style.privacy}>
+        <label htmlFor="privacy">
+          accettazione{" "}
+          <a target="_blank" href={"/privacy"} rel="noopener noreferrer">
+            privacy
+          </a>
+        </label>
+        <input type="checkbox" name="privacy" id="privacy" required />
       </p>
       <p>
         <button disabled={submit ? false : true} type="submit">
