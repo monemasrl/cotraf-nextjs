@@ -60,7 +60,7 @@ function Certificazioni({}: Props) {
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="/pdf/certificazioni2025/Attestazione_SOA_COTRAF_251003.pdf"
+                  href="/pdf/certificazioni2025/Attestazione_SOA_COTRAF_260119.pdf"
                 >
                   <span>{pdfIcon}</span> Link alla certificazione
                 </a>
