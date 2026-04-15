@@ -82,7 +82,7 @@ function Certificazioni({}: Props) {
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="/pdf/certificazioni2025/SA8000-220602-CONSORZIO_COTRAF_26.06.2024_R01.pdf"
+                  href="/pdf/certificazioni2025/SA8000-220602-CONSORZIO-COTRAF_26.06.2024_R01.pdf"
                 >
                   <span>{pdfIcon}</span> Link alla certificazione
                 </a>

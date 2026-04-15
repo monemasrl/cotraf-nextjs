@@ -39,6 +39,7 @@ const consorziati = {
     },
     { nome: "KAIROS S.R.L.", immagine: "/img/consorziate/kairos.png" },
     { nome: "SICUREL S.R.L.", immagine: "/img/consorziate/sicurel.png" },
+    { nome: "SERVIPLUS", immagine: "/img/consorziate/serviplus.jpg" },
   ],
 };
 const storia = [
