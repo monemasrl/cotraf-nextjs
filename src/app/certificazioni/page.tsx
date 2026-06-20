@@ -82,7 +82,22 @@ function Certificazioni({}: Props) {
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="/pdf/certificazioni2025/SA8000-220602-CONSORZIO-COTRAF_26.06.2024_R01.pdf"
+                  href="/pdf/certificazioni2025/SA8000-25-15-CONSORZIO COTRAF_09.01.2026_R02.pdf"
+                >
+                  <span>{pdfIcon}</span> Link alla certificazione
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <div className={style.certificazioneTitle}>Politica SA8000</div>
+
+            <ul>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="/pdf/certificazioni2025/Politica SA8000.pdf"
                 >
                   <span>{pdfIcon}</span> Link alla certificazione
                 </a>
@@ -110,6 +125,22 @@ function Certificazioni({}: Props) {
           </li>
           <li>
             <div className={style.certificazioneTitle}>
+              Politica qualità parità di genere
+            </div>
+            <ul>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="/pdf/COTRAF_POLITICA_PARITA_DI_GENERE.pdf"
+                >
+                  <span>{pdfIcon}</span> Link alla certificazione
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <div className={style.certificazioneTitle}>
               ISO 9001:2015, ISO 14001:2015 and ISO 45001:2018.
             </div>
             <p>
@@ -125,6 +156,53 @@ function Certificazioni({}: Props) {
                   href="/pdf/certificazioni2025/COTRAF_001041-1-IT-1-QES-I6.pdf"
                 >
                   <span>{pdfIcon}</span> Link alla certificazione
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <div className={style.certificazioneTitle}>
+              Politica aziendale per la sicurezza, la qualitá e la tutela
+              ambientale
+            </div>
+
+            <ul>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="/pdf/certificazioni2025/ALL.2-POLITICA_AZIENDALE_SICUREZZA_QUALITA_MBIENTE.pdf"
+                >
+                  <span>{pdfIcon}</span> Link alla certificazione
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <div className={style.certificazioneTitle}>D.L.g.s.231/2021</div>
+            <p>
+              ll Consorzio Cotraf adotta il Modello di organizzazione e gestione
+              ispirato al D.L.g.s 231/2001 avente a oggetto la responsabilità
+              amministrativa delle società per i reati commessi dai propri
+              dipendenti a vantaggio dell'azienda
+            </p>
+            <ul>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="/pdf/certificazioni2025/Codice_etico_Cotraf.pdf"
+                >
+                  <span>{pdfIcon}</span> Codice etico
+                </a>
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="/pdf/certificazioni2025/Cotraf_MO231_Parte_generale.pdf"
+                >
+                  <span>{pdfIcon}</span> MO231 Parte generale
                 </a>
               </li>
             </ul>
